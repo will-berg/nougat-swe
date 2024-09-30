@@ -1,0 +1,4 @@
+transformers
+pymupdf
+python-Levenshtein
+nltk

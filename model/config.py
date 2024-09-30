@@ -1,0 +1,10 @@
+base_model = "facebook/nougat-small"
+repo = "powow/nougat-swe"	# Repo for the fine-tuned model
+# repo = "facebook/nougat-small"	# Repo for the fine-tuned model
+max_length = 3584
+batch_size = 20
+num_workers = 8
+image_size = [1056, 816]	# Not used at the moment
+train_path = "../datasets/train.jsonl"
+val_path = "../datasets/validation.jsonl"
+test_path = "../data/datasets/test.jsonl"
