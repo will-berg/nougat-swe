@@ -1,3 +1,6 @@
+# nougat-swe
+Fine-tuned version of nougat, available here: https://github.com/facebookresearch/nougat
+
 ## Data
 The dataset is available on Huggingface.
 The code used to generate the data is available in the `data/code` directory.
