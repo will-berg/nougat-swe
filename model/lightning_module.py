@@ -95,14 +95,20 @@ class NougatModelPLModule(pl.LightningModule):
         scores = []
         for pred, seq in zip(predictions, target_sequences):
             # Compute the metrics for the current prediction, returns a dict
+            # print()
+            # print(pred)
+            # print(seq)
+            # print()
+            # exit()
             metrics = compute_metrics(pred, seq)
-            scores.append([metrics["edit_dist"], metrics["bleu"], metrics["meteor"], metrics["precision"], metrics["recall"], metrics["f_measure"]]) # , metrics["wer"], metrics["cer"]])
+            scores.append([metrics["edit_dist"], metrics["bleu"], metrics["meteor"], metrics["precision"], metrics["recall"], metrics["f_measure"], metrics["exact_match"]]) # , metrics["wer"], metrics["cer"]])
 
         # Append the scores to the test_metrics list
         self.test_metrics.append(scores)
         # Save the test_metrics list to a numpy file, overwriting the previous file until the final batch
         np.save("test_metrics.npy", np.array(self.test_metrics))
         scores = np.array(scores)
+        scores = np.where(scores == None, np.nan, scores)  # Replace None with np.nan
         scores_dict = {
             "edit_distance": np.nanmean(scores[:, 0]),
             "bleu": np.nanmean(scores[:, 1]),
@@ -110,6 +116,7 @@ class NougatModelPLModule(pl.LightningModule):
             "precision": np.nanmean(scores[:, 3]),
             "recall": np.nanmean(scores[:, 4]),
             "f_measure": np.nanmean(scores[:, 5]),
+            "exact_match": np.nanmean(scores[:, 6]),
             # "wer": np.mean(scores[:, 6]),
             # "cer": np.mean(scores[:, 7]),
         }

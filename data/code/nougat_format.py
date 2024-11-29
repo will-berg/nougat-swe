@@ -8,6 +8,7 @@ figure_path = "nougat_prereqs/figures/"
 tex_path = "nougat_prereqs/tex_source/"
 html_path = "nougat_prereqs/htmls/"
 output_path = "../datasets/multi_math_test/"
+tex_path = "comparison/tex/"
 
 def create_figures():
     """

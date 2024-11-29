@@ -21,9 +21,9 @@ def test():
     test_dataloader = DataLoader(test_dataset, batch_size=cfg.batch_size, shuffle=False, num_workers=cfg.num_workers)
 
     model_module = NougatModelPLModule(config=config, processor=processor, model=model)
-    wandb_logger = WandbLogger(project="nougat-swe", name="")
+    # wandb_logger = WandbLogger(project="nougat-swe", name="")
 
-    trainer = pl.Trainer(logger=wandb_logger)
+    # trainer = pl.Trainer(logger=wandb_logger)
     trainer = pl.Trainer()
     trainer.test(model=model_module, dataloaders=test_dataloader)
 
