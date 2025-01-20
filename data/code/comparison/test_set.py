@@ -60,7 +60,8 @@ def create_dataset(images_path, markdown_path):
                 data_sample = {}
                 md_path = Path(markdown)
                 data_sample["image"] = f"{images_path}/{image_folder.name}/{image.name}"
-                data_sample["markdown"] = md_path.read_text(encoding="utf8").strip()
+                content = md_path.read_text(encoding="utf8").strip()
+                data_sample["markdown"] = content
                 data_sample["meta"] = "[]"
                 f.write(json.dumps(data_sample, ensure_ascii=False) + "\n")
 

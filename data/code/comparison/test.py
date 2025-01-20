@@ -10,6 +10,22 @@ import numpy as np
 import re
 
 
+def clean_formula(formula):
+    formula = re.sub(r"\\label{.*?}", "", formula)
+    formula = re.sub(r"\\label {.*?}", "", formula)
+    formula = re.sub(r"%", "", formula)
+    formula = re.sub(r"\\quad", "", formula)
+    formula = re.sub(r"\\qquad", "", formula)
+    formula = re.sub(r"\\vspace{.*?}", "", formula)
+    formula = re.sub(r"\\hspace{.*?}", "", formula)
+    formula = re.sub(r"\\parbox{.*?}", "", formula)
+    formula = re.sub(r"\\hfill", "", formula)
+    formula = re.sub(r"\\vfill", "", formula)
+    formula = re.sub(r"\\tag{.*?}", "", formula)
+    formula = re.sub(r"\\text{.*?}", "", formula)
+    formula = re.sub(r"\\nonumber", "", formula)
+    return formula
+
 def load_model_and_processor(repo="powow/nougat-swe"):
     processor = NougatProcessor.from_pretrained(repo)
     model = VisionEncoderDecoderModel.from_pretrained(repo)
@@ -33,6 +49,13 @@ def load_images_and_ground_truth(image_dir, markdown_dir):
             image_path = image_files[0]
             with open(markdown_files[0], "r", encoding="utf-8") as f:
                 ground_truth = f.read()
+            # Before cleaning
+            if re.search(r"\\qquad{.+}", ground_truth):
+                continue
+            ground_truth = clean_formula(ground_truth)
+            # After cleaning
+            if len(ground_truth) > 200:
+                continue
             data_pairs.append((image_path, ground_truth))
         else:
             print(f"Skipping folder {folder}: Expected one .png and one .mmd file.")
@@ -40,14 +63,23 @@ def load_images_and_ground_truth(image_dir, markdown_dir):
     return data_pairs
 
 
+"""
+The code below is for testing prediction with the nougat-swe model. It will be compared to prediction with
+the TexTeller model, which is ran from that model's directory using the following command in the src directory:
+python inference.py -img "img_path.png" --inference-mode cuda
+
+A separate main function will have to be created for the TexTeller model.
+The final results produced by metrics.py will then be compared.
+"""
 if __name__ == "__main__":
     image_gt_pairs = load_images_and_ground_truth(Path("images"), Path("markdown"))
+    print(f"Loaded {len(image_gt_pairs)} image-ground truth pairs.")
 
     # Split the pairs into batches of size 20
-    batch_size = 20
+    batch_size = 10
     image_gt_pairs = [image_gt_pairs[i:i + batch_size] for i in range(0, len(image_gt_pairs), batch_size)]
 
-    model, processor, device = load_model_and_processor(repo="powow/nougat-swe")
+    model, processor, device = load_model_and_processor()
     model.to(device)
 
     results = []
@@ -73,18 +105,14 @@ if __name__ == "__main__":
         generated = processor.post_process_generation(generated, fix_markdown=False)
 
         metrics = compute_metrics(generated, ground_truths)
-        results.append(metrics)
+        # Print the average metrics for this batch
         print(metrics)
-
-        exit()
+        results.append(metrics)
 
     # Save the results as a npy file
-    np.save("results.npy", results)
+    np.save("nougat_results.npy", results)
 
     # Results contains a list of dictionaries, one for each batch.
     # Take the mean of each metric across all batches.
-    aggregated_results = {metric: np.mean([result[metric] for result in results]) for metric in results[0]}
+    aggregated_results = {metric: np.nanmean([result[metric] for result in results]) for metric in results[0]}
     print(aggregated_results)
-
-
-

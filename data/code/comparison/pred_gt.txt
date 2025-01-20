@@ -1,0 +1,73 @@
+\[\eta_{ab}=2{\rm Tr}({\bf J}_{a}{\bf J}_{b})\]
+\[\eta_{ab} = 2 {\mathrm{Tr}}(\mathbf{J}_a\mathbf{J}_b)\]
+Metrics: 0.4211, 0.0000, 0, 0.0000, 0.0000, 0.0000
+
+\[d_{1}A_{1}^{0}=F,\ d_{1}F=0,\ d_{1}B_{2r}^{0}=0,\]
+\[d_1 A^0_1 = F, \; d_1 F = 0, \; d_1 B^0_{2r} = 0,\]
+Metrics: 0.5283, 0.0000, 0, 0.0000, 0.0000, 0.0000
+
+\[\frac{d}{d\lambda}\left(\frac{\dot{x}^{\mu}}{\sqrt{g_{\mu\nu}(u) \dot{x}^{\mu}\dot{x}^{\nu}}}\right)=0\]
+\[ \frac{d}{d\lambda} \left( \frac{\dot{x}^\mu}{\sqrt{g_{\mu\nu}(u) \dot{x}^\mu \dot{x}^\nu}} \right) = 0\]
+Metrics: 0.1028, 0.0000, 0, 0.0000, 0.0000, 0.0000
+
+\[a_{i}^{\prime}\to a_{i}^{\prime}-\partial_{i}^{\prime}\lambda+i[\lambda,a_{i}^{ \prime}]_{\star}.\]
+\[a_{i}^{\prime} \rightarrow a_{i}^{\prime}-\partial_{i}^{\prime}\lambda  +i[\lambda,a_{i}^{\prime}]_{\star}.\]
+Metrics: 0.1081, 0.0000, 0, 0.0000, 0.0000, 0.0000
+
+\[\Gamma_{\lambda\kappa}{}^{\mu}=e_{i}{}^{\mu}e^{i}{}_{\kappa, \lambda}.\]
+\[{\Gamma_{\lambda\kappa}}^{\mu} = {e_i}^\mu  {e^i}_{\kappa ,\lambda}.\]
+Metrics: 0.2297, 0.0000, 0, 0.0000, 0.0000, 0.0000
+
+\[(a,v)\,\sim(b,w)\quad\Leftrightarrow\quad(a,v)\,=\,(bg,g^{-1}w), \quad g\in G.\]
+\[(a,v) \: \sim (b,w)  \Leftrightarrow  (a,v) \, = \, (bg,g^{-1}w),  g \in G.\]
+Metrics: 0.2927, 0.0064, 0, 0.2500, 0.0833, 0.1250
+
+\[\widetilde{D}_{G}^{ab}(x-y)=\int\frac{d^{4}k}{\left(2\pi\right)^{4 }}\delta^{ab}\left[\frac{\left(-i\right)}{k^{2}}-C_{G}\delta\left(k\right) \right]\exp\left\{-ik\left(x-y\right)\right\}.\]
+\[\widetilde{D}_G^{ab}(x-y)=\int \frac{d^4k}{\left(2\pi \right)^4}\delta ^{ab}\left[ \frac{\left(-i\right) }{k^2}-C_G\delta\left(k\right) \right] \exp \left\{ -ik\left(x-y\right) \right\}.\]
+Metrics: 0.1042, 0.0000, 0, 0.0000, 0.0000, 0.0000
+
+\[Q_{H}=\frac{1}{32\pi^{2}}\int_{S^{3}}w^{1}\wedge w^{2}\,,\]
+\[Q_H = \frac{1}{32\pi^2}\int_{S^3}  w^1 \wedge w^2\,,\]
+Metrics: 0.1967, 0.0000, 0, 0.0000, 0.0000, 0.0000
+
+\[d(\phi,\psi)=\sup_{a\in A}\{|\phi(a)-\psi(a)|:\|[D,a]\|\leq 1\}\]
+\[d(\phi, \psi) = \sup_{a \in A} \{ | \phi (a) - \psi (a) | : \| [D,a] \| \le 1 \}\]
+Metrics: 0.2262, 0.0000, 0, 0.0000, 0.0000, 0.0000
+
+\[\chi(\mathbf{a})=\exp\left(\frac{1}{2}\mathbf{a}\mathbf{M} \mathbf{a}+\mathbf{a}\langle\mathbf{q}\rangle\right).\]
+\[\chi ({\bf a})=\exp\left(\frac 12{\bf a}{\bf M}{\bf a}+{\bf a}\langle {\bf q}\rangle\right).\]
+Metrics: 0.3448, 0.0000, 0, 0.0000, 0.0000, 0.0000
+
+\[\Pi_{1}\,=\,-\frac{1}{4\pi(-z)^{1/2}}\arctan\sqrt{-z};\,\,\,\,\,\Pi_ {2}=\,\frac{1}{16\pi m\,z}\left[1-\left(\frac{1+z}{2(-z)^{1/2}}\right)\arctan \sqrt{-z}\right].\]
+\[\Pi _{1} \,=\, -\frac{1}{4\pi (-z)^{1/2}}\arctan \sqrt{-z};\, \,\, \,\, \Pi_{2}=\,\frac{1}{16\pi m\, z}\left[ 1-\left( \frac{1+z}{2 (-z)^{1/2}}\right)\arctan\sqrt{-z}\right] . \]
+Metrics: 0.0889, 0.0000, 0, 0.0000, 0.0000, 0.0000
+
+\[f(s/\mu^{2},\ s/M^{2})=1+M^{\gamma}+M^{B}\ .\]
+\[f(s/ \mu^2,~ s/M^2) = 1 + M^{\gamma} + M^{B} ~.\]
+Metrics: 0.2745, 0.0000, 0, 0.0000, 0.0000, 0.0000
+
+\[\Gamma(m^{2},\{f_{I}(X)\})=\sum_{l=l_{0}}^{n}\Gamma^{(l)}(m^{2},\, \{f_{\rm I}(X)\})\]
+\[\Gamma (m^2, \{ f_I (X) \}) = \sum_{l = l_0}^n \Gamma^{(l)} (m^2, \, \{ f_{\mbox{\scriptsize{I}}} (X) \} ) \]
+Metrics: 0.3874, 0.0000, 0, 0.0000, 0.0000, 0.0000
+
+\[\vec{K}(\tau)=q^{o}(\tau)\vec{p}+\vec{K}^{\prime}(\tau).\]
+\[\vec{K}(\tau)=q^o(\tau)\vec{p}+\vec{K}'(\tau). \]
+Metrics: 0.2000, 0.0000, 0, 0.0000, 0.0000, 0.0000
+
+\[\Omega^{*}(M)=\pi\left(\Omega^{*}(P)|_{\rm basic}\right).\]
+\[\Omega^{*}(M) = \pi \left( \Omega^{*}(P)\vert_{{\rm basic}} \right).  \]
+Metrics: 0.1892, 0.0000, 0, 0.0000, 0.0000, 0.0000
+
+\[\partial_{+}\partial_{-}^{2}\sigma=\frac{ig^{2}}{\sqrt{2}}[ \partial_{-}^{2}\sigma,\sigma].\]
+\[\partial_{+}\partial_{-}^{2}\sigma ={ig^{2}\over\sqrt{2}}[\partial_{-}^{2}\sigma ,\sigma].\]
+Metrics: 0.1368, 0.0000, 0, 0.0000, 0.0000, 0.0000
+
+\[\mathcal{R}=\alpha_{1}\beta_{2}\gamma_{3}-\alpha_{1}\beta_{3} \gamma_{2}+\alpha_{2}\beta_{3}\gamma_{1}-\alpha_{2}\beta_{1}\gamma_{3}+\alpha_{ 3}\beta_{1}\gamma_{2}-\alpha_{3}\beta_{2}\gamma_{1}.\]
+\[{\cal R}=\alpha_1 \beta_2 \gamma_3 -\alpha_1 \beta_3 \gamma_2 +\alpha_2 \beta_3 \gamma_1 -\alpha_2 \beta_1 \gamma_3 +\alpha_3 \beta_1 \gamma_2 -\alpha_3 \beta_2 \gamma_1.\]
+Metrics: 0.2172, 0.0000, 0, 0.0000, 0.0000, 0.0000
+
+\[\omega_{\cal C}=\omega_{\cal L}+\omega_{\cal L},\]
+\[\omega_{\cal C}=\omega_{\cal L} + \omega_{\tilde {\cal L}},\]
+Metrics: 0.1746, 0.0795, 0, 0.5000, 0.2857, 0.3636
+
+

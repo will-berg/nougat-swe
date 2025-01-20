@@ -2,3 +2,5 @@
 /images
 /pdf
 /tex
+/__pycache__
+/swe_text
