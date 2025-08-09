@@ -9,7 +9,6 @@ Training data is available on Huggingface: https://huggingface.co/datasets/powow
 ## Model
 The model related code is available in the `model` directory.
 This includes code for fine-tuning, testing, inference, etc. 
-The model itself is available on Huggingface: https://huggingface.co/powow/nougat-swe
 
 **Prerequisites for prediction:**
 * Working cuda installation, see for example: https://pytorch.org/get-started/locally/
